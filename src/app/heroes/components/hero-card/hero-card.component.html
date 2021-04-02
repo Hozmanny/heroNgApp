@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{heroz.superhero}}</mat-card-title>
+        <mat-card-subtitle>{{heroz.alter_ego}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="heroz | image" alt="" srcset="">
+
+    <mat-card-content>
+        <h3>{{heroz.publisher}}</h3>
+        <p>
+            <strong>First apparition</strong>
+            {{heroz.first_appearance}}
+            <br>
+            <strong>Characters: </strong>
+            {{heroz.characters}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="warn" [routerLink]="['/heroes/',heroz.id]">
+            See more...
+        </button>
+        <button mat-button color="info" [routerLink]="['/heroes/edit/',heroz.id]">
+            Edit
+        </button>
+    </mat-card-actions>
+</mat-card>

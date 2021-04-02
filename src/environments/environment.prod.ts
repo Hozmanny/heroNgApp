@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  db_endPoint: 'http://lsomething'
 };
